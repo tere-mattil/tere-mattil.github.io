@@ -8,8 +8,6 @@
 
     <title>Libra Bar Menú</title>
 
-    <link rel="stylesheet" href="main.css">
-
     <style>
         body {
             background-color: white;
@@ -27,225 +25,162 @@
             color: white;
         }
 
-
-        .nav {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            background-color: black;
-
-            height: 10vh;
-            width: 100%;
-            z-index: 3;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-
-
-        }
-
-
-
-
-        button {
-            background-color: #87281b;
-            color: white;
-            width: 130px;
-            height: 50px;
-            text-transform: uppercase;
-            border-radius: 10px;
-        }
-
-        button:hover {
-            background-color: white;
-            color: #67727E;
-        }
-
-        .titulo {
-            margin-top: 100px;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-#nav-container {
-    z-index: 5;
-    display: none;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    pointer-events: none;
-}
-
-#nav-container .bg {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 70px);
-    visibility: hidden;
-    opacity: 0;
-    transition: .3s;
-    background: #000;
-}
-
-#nav-container:focus-within .bg {
-    visibility: visible;
-    opacity: .6;
-}
-
-#nav-container * {
-    visibility: visible;
-}
-        
-        #nav-containerul {
-            display: flex;
-            text-transform: uppercase;
-            list-style-type: none;
-        }
-
-        #nav-containerul li {
-            text-align: center;
-            margin-left: 30px;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-        }
-
-
-        #nav-container a {
+        a {
             text-decoration: none;
-            color: white;
+
+            font-family: 'Cabin', sans-serif;
+            color: #646464;
         }
 
-        #nav-container a:hover {
+        a:hover {
             text-decoration: none;
-            color: #b9adb2;
+            color: #d3624b;
         }
 
-        #nav-container a:active {
+        a:active {
             color: #E3E4E0;
         }
-        
-
-.button {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 8;
-    -webkit-appearance: none;
-    border: 0;
-    background: transparent;
-    border-radius: 0;
-    height: 70px;
-    width: 30px;
-    cursor: pointer;
-    pointer-events: auto;
-    margin-left: 25px;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.icon-bar {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: #aaa;
-    transition: .3s;
-}
-
-.icon-bar + .icon-bar {
-    margin-top: 5px;
-}
-
-#nav-container:focus-within .button {
-    pointer-events: none;
-}
-
-#nav-container:focus-within .icon-bar:nth-of-type(1) {
-    transform: translate3d(0, 8px, 0) rotate(45deg);
-}
-
-#nav-container:focus-within .icon-bar:nth-of-type(2) {
-    opacity: 0;
-}
-
-#nav-container:focus-within .icon-bar:nth-of-type(3) {
-    transform: translate3d(0, -8px, 0) rotate(-45deg);
-}
 
 
-#nav-content {
-    margin-top: 70px;
-    padding: 20px;
-    width: 90%;
-    max-width: 300px;
-    position: absolute;
-    z-index: 5;
-
-    top: 0;
-    left: 0;
-    height: calc(100% - 70px);
-    background: #ececec;
-    pointer-events: auto;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    transform: translateX(-100%);
-    transition: transform .3s;
-    will-change: transform;
-    contain: paint;
-}
-
-#nav-content ul {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#nav-content li a {
-    padding: 10px 5px;
-    display: block;
-    text-transform: uppercase;
-    transition: color .1s;
-}
-
-#nav-content li a:hover {}
-
-
-#nav-container:focus-within #nav-content {
-    transform: none;
-}
+        @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600');
 
 
 
 
+        #nav-container {
+            z-index: 5;
+            display: none;
+            position: fixed;
+            height: 130vh;
+            width: 100%;
+            pointer-events: none;
+        }
 
-@media screen and (max-width: 640px) {
-    header ul {
-        display: none;
+        #nav-container .bg {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 70px);
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s;
+            background: #000;
+        }
 
-    }
+        #nav-container:focus-within .bg {
+            visibility: visible;
+            opacity: .6;
+        }
 
-    #nav-container {
-        display: flex;
-    }
+        #nav-container * {
+            visibility: visible;
+        }
+
+        .button {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 8;
+            -webkit-appearance: none;
+            border: 0;
+            background: transparent;
+            border-radius: 0;
+            height: 70px;
+            width: 30px;
+            cursor: pointer;
+            pointer-events: auto;
+            margin-left: 25px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        .icon-bar {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #aaa;
+            transition: .3s;
+        }
+
+        .icon-bar+.icon-bar {
+            margin-top: 5px;
+        }
+
+        #nav-container:focus-within .button {
+            pointer-events: none;
+        }
+
+        #nav-container:focus-within .icon-bar:nth-of-type(1) {
+            transform: translate3d(0, 8px, 0) rotate(45deg);
+        }
+
+        #nav-container:focus-within .icon-bar:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        #nav-container:focus-within .icon-bar:nth-of-type(3) {
+            transform: translate3d(0, -8px, 0) rotate(-45deg);
+        }
+
+
+        #nav-content {
+            margin-top: -20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 300px;
+            position: absolute;
+            z-index: 5;
+
+            top: 0;
+            left: 0;
+            height: calc(100% - 70px);
+            background: #ececec;
+            pointer-events: auto;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform: translateX(-100%);
+            transition: transform .3s;
+            will-change: transform;
+            contain: paint;
+        }
+
+        #nav-content ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nav-content li a {
+            padding: 10px 5px;
+            display: block;
+            text-transform: uppercase;
+            transition: color .1s;
+        }
+
+        #nav-content li a:hover {}
+
+
+        #nav-container:focus-within #nav-content {
+            transform: none;
+        }
 
 
 
+
+
+        @media screen and (max-width: 640px) {
+            header ul {
+                display: none;
+
+            }
+
+            #nav-container {
+                display: flex;
+            }
 
     </style>
+
 
 </head>
 
@@ -260,12 +195,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </div>
+
         <div id="nav-content" tabindex="0">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="aboutus.html">Conócenos</a></li>
-                <li><a href="visita.html">Ayúdanos</a></li>
-                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="#tapas">TAPAS</a></li>
+                <li><a href="#platos">PLATOS COMBINADOS</a></li>
+                <li><a href="#bocadillos">BOCADILLOS</a></li>
+                <li><a href="#sandwiches">SANDWICHES Y HAMBURGUESAS</a>
+                </li>
+                <li><a href="#raciones">RACIONES</a></li>
 
 
 
@@ -284,7 +222,7 @@
 
 
 
-<!--
+    <!--
     <nav class="nav">
         <a href="#tapas">TAPAS</a>
         <a href="#platos">PLATOS COMBINADOS</a>
@@ -294,8 +232,8 @@
     </nav>
 
     -->
-    
-    
+
+
     <div class="titulo">
         <h1>BAR-CAFETERIA</h1>
         <h1>LIBRA</h1>
