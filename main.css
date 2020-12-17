@@ -1,29 +1,24 @@
-/*#739086
-#87281b rojo oscuro
- #d3624b naranja
-#ac918f  gris rosita
-
-
-*/
-
-
-
-
 body{
    background-color:white;
    font-family: geneva ;
     font-size:100%;
     align-items:center;
     color:#4c4543;
+    text-align: center;
 
   } 
 
 
+h3{
+    background-color:black;
+    color:white;
+}
 
-.barrainicio{
+
+.nav{
   position:fixed;
   top:0px;left:0px;
-  background-color:#d3624b;
+  background-color:black;
  
   height:10vh;width:100%;
     z-index:3;
@@ -31,34 +26,35 @@ body{
     display:flex;
     align-items:center;
     justify-content:space-around;
+    
 
 }
-.barrainicio ul{
+.nav ul{
    display: flex;
    text-transform:uppercase;
    list-style-type: none;   
 }
-.barrainicio ul li{
+.nav ul li{
     text-align:center;
     margin-left:30px;
     padding:10px 20px;
     font-size:0.9rem;
 }
-.barrainicio img {
+.nav img {
     padding: none;
     width:80px;
     height: 50px;
 
 }
-.barrainicio a{
+.nav a{
     text-decoration:none;
     color:white;
 }
-.barrainicio a:hover{
+.nav a:hover{
     text-decoration:none;
     color: #b9adb2;
 }
-.barrainicio a:active {
+.nav a:active {
   color: #E3E4E0;
 }
 
@@ -77,39 +73,5 @@ button:hover{
     color:#67727E;
 }
 
-
-
-
-
-.titulo{
-    background-color:#ac918f;
-    color:white;
-    height:200px;
-    text-align:center;
-    margin:100px 0 20px 0;
-    padding:50px;
-    
-    font-size:20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.titulo{margin-top:100px;}
 
