@@ -45,39 +45,6 @@
 
         }
 
-        .nav ul {
-            display: flex;
-            text-transform: uppercase;
-            list-style-type: none;
-        }
-
-        .nav ul li {
-            text-align: center;
-            margin-left: 30px;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-        }
-
-        .nav img {
-            padding: none;
-            width: 80px;
-            height: 50px;
-
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: white;
-        }
-
-        .nav a:hover {
-            text-decoration: none;
-            color: #b9adb2;
-        }
-
-        .nav a:active {
-            color: #E3E4E0;
-        }
 
 
 
@@ -98,14 +65,226 @@
         .titulo {
             margin-top: 100px;
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+#nav-container {
+    z-index: 5;
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+}
+
+#nav-container .bg {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    background: #000;
+}
+
+#nav-container:focus-within .bg {
+    visibility: visible;
+    opacity: .6;
+}
+
+#nav-container * {
+    visibility: visible;
+}
+        
+        #nav-containerul {
+            display: flex;
+            text-transform: uppercase;
+            list-style-type: none;
+        }
+
+        #nav-containerul li {
+            text-align: center;
+            margin-left: 30px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+
+        #nav-container a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #nav-container a:hover {
+            text-decoration: none;
+            color: #b9adb2;
+        }
+
+        #nav-container a:active {
+            color: #E3E4E0;
+        }
+        
+
+.button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 8;
+    -webkit-appearance: none;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 70px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 25px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #aaa;
+    transition: .3s;
+}
+
+.icon-bar + .icon-bar {
+    margin-top: 5px;
+}
+
+#nav-container:focus-within .button {
+    pointer-events: none;
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(1) {
+    transform: translate3d(0, 8px, 0) rotate(45deg);
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(2) {
+    opacity: 0;
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(3) {
+    transform: translate3d(0, -8px, 0) rotate(-45deg);
+}
+
+
+#nav-content {
+    margin-top: 70px;
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    position: absolute;
+    z-index: 5;
+
+    top: 0;
+    left: 0;
+    height: calc(100% - 70px);
+    background: #ececec;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+    contain: paint;
+}
+
+#nav-content ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-content li a {
+    padding: 10px 5px;
+    display: block;
+    text-transform: uppercase;
+    transition: color .1s;
+}
+
+#nav-content li a:hover {}
+
+
+#nav-container:focus-within #nav-content {
+    transform: none;
+}
+
+
+
+
+
+@media screen and (max-width: 640px) {
+    header ul {
+        display: none;
+
+    }
+
+    #nav-container {
+        display: flex;
+    }
+
+
+
 
     </style>
 
 </head>
 
 <body>
+    <div id="nav-container">
 
 
+
+        <div class="bg"></div>
+        <div class="button" tabindex="0">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </div>
+        <div id="nav-content" tabindex="0">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="aboutus.html">Conócenos</a></li>
+                <li><a href="visita.html">Ayúdanos</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+
+
+
+                <!--
+        <li class="small"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
+          
+-->
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!--
     <nav class="nav">
         <a href="#tapas">TAPAS</a>
         <a href="#platos">PLATOS COMBINADOS</a>
@@ -114,6 +293,9 @@
         <a href="#raciones">RACIONES</a>
     </nav>
 
+    -->
+    
+    
     <div class="titulo">
         <h1>BAR-CAFETERIA</h1>
         <h1>LIBRA</h1>
@@ -141,18 +323,15 @@
 
         <h3> PLATOS COMBINADOS </h3>
         <p>
-            Perrito Caliente <br>
-            Tostada de jamón <br>
-            Tostada de Ensaladilla rusa <br>
-            Salchipapas <br>
-            Tostada de Bacon y huevo <br>
-            Braviolis <br>
-            Tosta de paté <br>
-            Tosta de lacon <br>
-            Tostada de queso y mebrillo <br>
-            Sandwich mixto <br>
-            Hamburguesa<br>
-            Tostada de lomo y pimiento
+            Huevos Chorizo y patatas ..............6,50€<br>
+            Filete de pollo, ensalada y patatas....7,00€<br>
+            Filete de ternera, esalada y patatas...7,00€<br>
+            Lomo, huevo y patatas..................6,50€<br>
+            Morcilla, huevos y patatas.............6,50€<br>
+            Chistorra, huevos y patatas............7,00€<br>
+            Filete de merluza, ensalada y patatas..7,00€<br>
+            Filete emperador, ensalada y patatas...7,00€<br>
+            Filete de Salmón, ensalada y patatas...7,00€<br>
         </p>
     </div>
     <div id="bocadillos">
