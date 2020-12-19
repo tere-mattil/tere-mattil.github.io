@@ -9,8 +9,10 @@
     <title>Libra Bar Menú</title>
 
     <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap');
         body {
-            background-color: white;
+            background-color: #EEEEEE;
             font-family: geneva;
             font-size: 100%;
             align-items: center;
@@ -21,8 +23,17 @@
 
 
         h3 {
-            background-color: black;
-            color: white;
+            text-align:left;
+            margin-top: 50px;
+            margin-left:20px;
+            font-size: 20px;
+            
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+/*            font-family: 'Roboto Slab', serif;*/
+            
+            
+            color: #4c4543;
         }
 
         a {
@@ -41,10 +52,17 @@
             color: #E3E4E0;
         }
 
-        strong{font-size: 110%;}
+        p{
+            font-family: 'Lato', sans-serif;
+            line-height: 50px;
+/*            text-transform: uppercase;*/
+        }
+        strong {
+            font-family: 'Lato', sans-serif;
+            font-size: 110%;
+        }
 
-        @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600');
-
+        
 
 
 
@@ -168,7 +186,87 @@
 
 
 
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            justify-content: center;
+        }
 
+        .flex-container>div {
+            background-color: #f1f1f1;
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 20px;
+        }
+
+        #div1 {
+            background-image: url("perrito.jpg");
+            background-size: cover;
+        }
+
+        #div2 {
+            background-image: url("jamon.jpg");
+            background-size: cover;
+        }
+
+        #div3 {
+            background-image: url("ensaladilla.jpg");
+            background-size: cover;
+        }
+
+        #div4 {
+            background-image: url("salchipapas.jpg");
+            background-size: cover;
+        }
+
+        #div5 {
+            background-image: url("baconhuevo.jpg");
+            background-size: cover;
+        }
+
+        #div6 {
+            background-image: url("braviolis.jpeg");
+            background-size: cover;
+        }
+
+        #div7 {
+            background-image: url("pate.jpg");
+            background-size: cover;
+        }
+
+        #div8 {
+            background-image: url("lacon.jpg");
+            background-size: cover;
+        }
+
+        #div9 {
+            background-image: url("membrillo.jpg");
+            background-size: cover;
+        }
+
+        #div10 {
+            background-image: url("mixto.jpg");
+            background-size: cover;
+        }
+
+        #div11 {
+            background-image: url("hamburguesa.jpg");
+            background-size: cover;
+        }
+
+        #div12 {
+            background-image: url("pimiento.jpg");
+            background-size: cover;
+        }
+
+        span{
+            background-color:white;
+            color: black;
+        }
 
         @media screen and (max-width: 640px) {
             header ul {
@@ -186,6 +284,7 @@
 </head>
 
 <body>
+    
     <div id="nav-container">
 
 
@@ -220,20 +319,23 @@
 
     <div id="tapas">
         <h3> NUESTRAS TAPAS</h3>
-        <p>
-            Perrito Caliente <br>
-            Tostada de jamón <br>
-            Tostada de Ensaladilla rusa <br>
-            Salchipapas <br>
-            Tostada de Bacon y huevo <br>
-            Braviolis <br>
-            Tosta de paté <br>
-            Tosta de lacon <br>
-            Tostada de queso y mebrillo <br>
-            Sandwich mixto <br>
-            Hamburguesa<br>
-            Tostada de lomo y pimiento
-        </p>
+
+        <div class="flex-container">
+            <div id="div1">Perrito Caliente </div>
+            <div id="div2">Tostada de jamón </div>
+            <div id="div3">Tostada de Ensaladilla rusa</div>
+            <div id="div4">Salchipapas</div>
+            <div id="div5">Tostada de Bacon y huevo</div>
+            <div id="div6">Braviolis</div>
+            <div id="div7">Tosta de paté</div>
+            <div id="div8">Tosta de lacon</div>
+            <div id="div9">Tostada de queso y mebrillo</div>
+            <div id="div10">Sandwich mixto</div>
+            <div id="div11">Hamburguesa</div>
+            <div id="div12">Tostada de lomo y pimiento</div>
+        </div>
+
+      
 
     </div>
     <div id="platos">
@@ -259,7 +361,7 @@
             Morcilla.......................................2,60€<br>
             Bacon..........................................2,60€ <br>
             Chistorra .....................................2,60€ <br>
-            Oreja...........................................3,00€<br> 
+            Oreja...........................................3,00€<br>
             Tortilla de patatas.......................2,60€ <br>
             Tortilla francesa...........................2,60€ <br>
             Panceta........................................2,60€ <br>
@@ -273,7 +375,7 @@
     <div id="sandwiches">
         <h3> SANDWICHES Y HAMBURGUESAS </h3>
         <p>
-            
+
             <strong>S. Vegetal................3,00€ </strong> <br>
             (Tomate, lechuga, huevo, cocido,esparrago y mayonesa)<br>
             <strong>S. Mixto....................2,00€ </strong><br>
@@ -282,9 +384,9 @@
             (York,queso y huevo frito)<br>
             <strong>H. Super...................4,00€ </strong> <br>
             (Tomate, lechuga, carne, queso, york, pepinillo y patatas)<br>
-            <strong>H. Especial.................5,00€</strong><br> 
+            <strong>H. Especial.................5,00€</strong><br>
             (tomate, lechuga, carne, queso, york, pepinillo, bacon y patata)<br>
-            
+
         </p>
 
     </div>
